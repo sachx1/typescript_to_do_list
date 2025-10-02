@@ -5,28 +5,82 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="dist/index.js" type="module"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quantico&display=swap" rel="stylesheet">
   <title>To-Do List in TypeScript</title>
   <style>
+
+    body {
+      background-color: 	#03011a;
+      color: rgb(233, 198, 204);
+      font-family: "Quantico", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    form {
+      font-family: "Quantico", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    button {
+      font-family: "Quantico", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    #ListContainer {
+      padding-top: 2vh;
+      flex-direction: column;
+    }
+
+    #TitleContainer {
+      text-align: center;
+      margin: 0 auto;
+      width: 100%; /* or a fixed width like 600px */
+    }
+
     #list {
       list-style: none;
       padding: 0;
       display: flex;
       flex-direction: column; /* Stack items vertically */
       align-items: center;     /* Center items horizontally */
+      border: 2px solid rgb(233, 198, 204);     /* Creates a white outline */
+      padding: 20px;               /* Adds space inside the border */
+      border-radius: 10px;         /* Optional: rounds the corners */
+      width: fit-content;          /* Shrinks to fit content */
+      margin: 20px auto;           /* Centers the form horizontally */
     }
 
     #new-task-form {
       display: flex;
       justify-content: center; /* Centers horizontally */
       align-items: center; /* Centers vertically */ 
+      flex-direction: column;
+      gap: 20px;
+      border: 2px solid rgb(233, 198, 204);     /* Creates a white outline */
+      padding: 20px;               /* Adds space inside the border */
+      border-radius: 10px;         /* Optional: rounds the corners */
+      width: fit-content;          /* Shrinks to fit content */
+      margin: 20px auto;           /* Centers the form horizontally */
+
     }
+
   </style>
 </head>
 <body>
-  <ul id="list"></ul>
-  <form id="new-task-form">
-    <input type="text" id="new-task-title">
-    <button type="submit">Add</button>
-  </form>
+  <div id="TitleContainer">
+    <h1>To Do List in TypeScript</h1>
+  </div>
+  <div id="ListContainer">
+    <form id="new-task-form">
+      <input type="text" id="new-task-title">
+      <button type="submit">Add Task</button>
+    </form>
+    <ul id="list">To-Do List</ul>
+  </div>
 </body>
 </html>
