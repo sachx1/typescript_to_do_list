@@ -5,11 +5,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="dist/index.js" type="module"></script>
-  <title>Document</title>
+  <title>To-Do List in TypeScript</title>
   <style>
     #list {
       list-style: none;
       padding: 0;
+      display: flex;
+      flex-direction: column; /* Stack items vertically */
+      align-items: center;     /* Center items horizontally */
+    }
+
+    #new-task-form {
+      display: flex;
+      justify-content: center; /* Centers horizontally */
+      align-items: center; /* Centers vertically */ 
     }
   </style>
 </head>
